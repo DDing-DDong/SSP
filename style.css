@@ -1,8 +1,9 @@
 :root {
   color-scheme: light;
-  --black: #050505;
   --white: #ffffff;
   --near: #f5f5f7;
+  --blue-soft: #f2f8ff;
+  --blue-panel: #eaf4ff;
   --ink: #1d1d1f;
   --muted: #6e6e73;
   --blue: #0071e3;
@@ -21,7 +22,7 @@ body {
   margin: 0;
   font-family: Arial, "Noto Sans KR", sans-serif;
   color: var(--ink);
-  background: var(--white);
+  background: linear-gradient(180deg, #ffffff 0%, #edf8ff 42%, #9fd6ff 72%, #0a2a66 100%);
 }
 
 .site-nav {
@@ -66,7 +67,7 @@ body {
   align-items: center;
   gap: clamp(28px, 6vw, 96px);
   padding: clamp(56px, 8vw, 112px) clamp(22px, 7vw, 112px);
-  background: radial-gradient(circle at 78% 42%, #eaf3ff 0, #f7f8fb 42%, #ffffff 74%);
+  background: transparent;
 }
 
 .hero-copy {
@@ -74,6 +75,11 @@ body {
 }
 
 .eyebrow {
+  display: none;
+}
+
+.hero .eyebrow {
+  display: block;
   margin: 0 0 14px;
   color: var(--blue);
   font-size: 18px;
@@ -96,7 +102,7 @@ h1 {
 
 h2 {
   margin-bottom: 18px;
-  font-size: clamp(42px, 5.2vw, 78px);
+  font-size: clamp(32px, 4.1vw, 62px);
   line-height: 1.05;
 }
 
@@ -150,23 +156,33 @@ p {
 }
 
 .section.light {
-  background: var(--near);
+  background: transparent;
 }
 
 .section.dark {
-  color: var(--white);
-  background: var(--black);
+  color: var(--ink);
+  background: transparent;
 }
 
 .section.dark p,
 .section.dark figcaption {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
 }
 
 .section-heading {
-  max-width: 980px;
+  max-width: min(1180px, 100%);
   margin: 0 auto clamp(34px, 5vw, 70px);
   text-align: center;
+}
+
+.section-heading h2,
+.section-heading p {
+  white-space: nowrap;
+}
+
+.section-heading p {
+  max-width: none;
+  font-size: clamp(16px, 1.55vw, 23px);
 }
 
 .feature-grid,
@@ -203,7 +219,7 @@ article,
 
 .section.dark article,
 .section.dark .product-showcase figure {
-  background: #161617;
+  background: var(--white);
 }
 
 article img,
@@ -248,9 +264,9 @@ figcaption,
 .demo video {
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(0, 113, 227, 0.14);
   border-radius: 24px;
-  background: #111111;
+  background: #f7fbff;
 }
 
 .example-panel {
@@ -300,7 +316,7 @@ figcaption,
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 20px;
-  background: #161617;
+  background: var(--blue-soft);
 }
 
 .impact-list article {
@@ -335,5 +351,10 @@ figcaption,
   article img,
   .product-showcase img {
     height: auto;
+  }
+
+  .section-heading h2,
+  .section-heading p {
+    white-space: normal;
   }
 }
