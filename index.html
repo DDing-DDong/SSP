@@ -7,222 +7,293 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="deck" aria-live="polite">
-      <section class="slide cover bg-cover is-active">
-        <div class="slide-inner title-block">
-          <p class="eyebrow">SSP - Safe Share PDF</p>
-          <h1>PDF 민감정보 AI 차단 시스템</h1>
-          <p class="lead">2026. 06. 26</p>
+    <header class="site-nav">
+      <a class="brand" href="#hero">SSP</a>
+      <nav aria-label="주요 메뉴">
+        <a href="#problem">문제</a>
+        <a href="#solution">기능</a>
+        <a href="#model">AI 모델</a>
+        <a href="#impact">효과</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Safe Share PDF</p>
+          <h1>공유 전 PDF<br />민감정보 제거</h1>
+          <p class="lead">
+            SSP는 PDF 문서의<br />
+            개인정보, 업무기밀 숨겨진 메타데이터를<br />
+            AI로 탐지하고 안전한 공유용 PDF를<br />
+            생성하는 보안 시스템입니다.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#solution">주요 기능 보기</a>
+            <a class="secondary-link" href="#demo">시연 확인</a>
+          </div>
         </div>
-        <div class="cover-meta">
-          <span>1조</span>
-          <span>팀장: 이재준 / 팀원: 정지운 · 김태형 · 장지훈 · 오승훈</span>
+        <figure class="hero-visual">
+          <img src="assets/media/image17.png" alt="안전 공유용 PDF 생성 화면" />
+        </figure>
+      </section>
+
+      <section id="problem" class="section light">
+        <div class="section-heading">
+          <p class="eyebrow">The Problem</p>
+          <h2>보이지 않는다고 삭제된 것은 아닙니다.</h2>
+          <p>
+            검은 박스, 단순 가림, 화면상 마스킹만으로는 PDF 내부 텍스트와 메타데이터가
+            그대로 남을 수 있습니다.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <img src="assets/media/image6.png" alt="마스킹 처리 허점" />
+            <h3>마스킹 처리의 허점</h3>
+            <p>복사와 붙여넣기 과정에서 원본 텍스트가 다시 노출될 수 있습니다.</p>
+          </article>
+          <article>
+            <img src="assets/media/image8.png" alt="숨겨진 데이터 존재" />
+            <h3>숨겨진 데이터</h3>
+            <p>Metadata와 Hidden text 레이어가 문서 안에 남아 보안 위험을 만듭니다.</p>
+          </article>
+          <article>
+            <img src="assets/media/image9.jpeg" alt="실제 사고 사례" />
+            <h3>실제 사고 사례</h3>
+            <p>PDF 내부 구조에 대한 이해 부족은 실제 기밀 정보 유출로 이어졌습니다.</p>
+          </article>
         </div>
       </section>
 
-      <section class="slide agenda bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">Contents</p>
-          <h2>목차</h2>
-          <ol class="agenda-list">
-            <li>프로젝트 개요</li>
-            <li>제안 배경</li>
-            <li>기존 보안의 한계</li>
-            <li>해결방안</li>
-            <li>모델 설명</li>
-            <li>기대 효과</li>
-          </ol>
+      <section class="section light detail">
+        <div class="section-heading">
+          <p class="eyebrow">Real Cases</p>
+          <h2>이미 실제로 일어난 문제입니다.</h2>
+        </div>
+        <div class="detail-grid">
+          <article>
+            <h3>미국 Paul Manafort 사건</h3>
+            <p>법원 제출 PDF 문서를 검은 박스로 처리한 뒤 공개했지만, Copy & Paste만으로 원문이 그대로 노출되었습니다.</p>
+            <span>시각적 마스킹만으로는 데이터를 보호할 수 없다는 대표 사례입니다.</span>
+          </article>
+          <article>
+            <h3>영국 국방부 사례</h3>
+            <p>핵잠수함 관련 PDF 문서를 공개하면서 텍스트 레이어가 제거되지 않아 기밀 정보가 그대로 노출되었습니다.</p>
+            <span>PDF 내부 구조에 대한 이해 부족이 보안 사고로 이어진 사례입니다.</span>
+          </article>
+          <article>
+            <h3>삼성전자 AI 오남용 사건</h3>
+            <p>DS 부문에서 챗GPT에 내부 정보, 설비 계측 소스 코드, 회의 내용이 입력되어 생성형 AI 보안 가이드라인 부재가 드러났습니다.</p>
+            <span>클라우드 AI 사용 시 민감 문서 자체가 외부 서버로 전송될 수 있습니다.</span>
+          </article>
         </div>
       </section>
 
-      <section class="slide split bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">01. 프로젝트 개요</p>
-          <h2>현재 PDF 공유 환경</h2>
-          <ul>
-            <li>기업 및 기관 간 PDF 문서 공유 증가</li>
-            <li>계약서, 의료정보, 내부자료 등의 외부 전달 빈번</li>
-            <li>민감정보 포함 상태로 문서 공유 발생</li>
-          </ul>
+      <section class="section dark limits">
+        <div class="section-heading">
+          <p class="eyebrow">Current Security Limits</p>
+          <h2>기존 보안은 문서 내부를 끝까지 보지 못합니다.</h2>
         </div>
-        <div class="stat-panel">‘보이지 않는 것’과 ‘삭제된 것’은 다릅니다.</div>
+        <div class="feature-grid">
+          <article>
+            <img src="assets/media/image10.png" alt="DRM 한계" />
+            <h3>DRM</h3>
+            <p>접근 권한 제어 중심 구조라 화면 촬영 등 우회가 가능하고, 접근 허용 이후 대응 방법이 제한됩니다.</p>
+          </article>
+          <article>
+            <img src="assets/media/image12.png" alt="DLP 한계" />
+            <h3>DLP</h3>
+            <p>규칙 기반 탐지 방식으로 운영되어 문맥 및 의미 기반 분석에 한계가 있고 비정형 데이터 탐지가 어렵습니다.</p>
+          </article>
+          <article>
+            <img src="assets/media/image11.png" alt="Redaction 한계" />
+            <h3>Redaction</h3>
+            <p>화면상 마스킹 중심 처리로 OCR 레이어, Metadata, 숨겨진 데이터 복구 위험이 남을 수 있습니다.</p>
+          </article>
+        </div>
       </section>
 
-      <section class="slide bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">02. 제안 배경</p>
-          <h2>핵심 문제</h2>
-          <div class="grid-3">
-            <article><h3>마스킹 처리의 허점</h3><p>민감 정보를 단순 가림 처리 후 외부 공유하면 복사/붙여넣기 과정에서 원본 텍스트가 노출될 수 있습니다.</p></article>
-            <article><h3>숨겨진 데이터 존재</h3><p>PDF 내부 Metadata 정보가 잔존하거나 Hidden text 레이어가 유지될 수 있습니다.</p></article>
-            <article><h3>실제 발생 사례</h3><p>기업 문서와 정부 기관 자료에서 기업 기밀 및 민감정보 유출 사례가 확인되었습니다.</p></article>
+      <section id="solution" class="section dark product">
+        <div class="section-heading">
+          <p class="eyebrow">How SSP Works</p>
+          <h2>찾아내고 지우고 새로 만듭니다</h2>
+          <p>
+            SSP는 단순히 덮어씌우지 않습니다. 민감정보를 식별하고 실제 데이터를 제거한 뒤,
+            공유 가능한 새 PDF를 만듭니다.
+          </p>
+        </div>
+        <div class="product-showcase">
+          <figure>
+            <img src="assets/media/image15.png" alt="AI 기반 정보 식별" />
+            <figcaption>AI 기반 정보 식별</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/media/image16.png" alt="데이터 제거 중심 구조" />
+            <figcaption>데이터 제거 중심 구조</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/media/image17.png" alt="안전 공유용 PDF 생성" />
+            <figcaption>안전 공유용 PDF 생성</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section light functions">
+        <div class="section-heading">
+          <p class="eyebrow">Core Features</p>
+          <h2>한국어 문서 환경에 맞춘 보안 처리</h2>
+          <p>
+            SSP는 국내 기업 및 행정 문서의 한글, 영문, 숫자 혼합 구조를 반영하고,
+            사용자 검토를 거쳐 유지, 마스킹, 삭제 대상을 결정합니다.
+          </p>
+        </div>
+        <div class="detail-grid">
+          <article>
+            <h3>NER 기반 개체 인식</h3>
+            <p>KoELECTRA 기반 NER로 PERSON, ORG, PHONE 등 Entity를 분류하고 주요 민감정보를 탐지합니다.</p>
+          </article>
+          <article>
+            <h3>위험도 점수 산정</h3>
+            <p>정보 유형과 조합을 기반으로 위험도를 계산해 사용자가 우선 검토해야 할 항목을 제시합니다.</p>
+          </article>
+          <article>
+            <h3>사용자 최종 검토</h3>
+            <p>자동 탐지 결과를 UI에서 확인하고 유지, 마스킹, 삭제 여부를 사용자가 최종 결정합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section light example">
+        <div class="section-heading">
+          <p class="eyebrow">Example</p>
+          <h2>문장에서 실제 마스킹 대상을 찾아냅니다.</h2>
+        </div>
+        <div class="example-panel">
+          <figure>
+            <img src="assets/media/image18.jpg" alt="BERT-CRF 기반 개체명 인식 모델의 태깅 프로세스" />
+          </figure>
+          <div>
+            <h3>NER 기반 식별 결과</h3>
+            <p>예시 문장: 장미 식당에서 2만원 결제했습니다.</p>
+            <ul>
+              <li>장미식당 → [가맹점명], 신뢰도 0.529</li>
+              <li>2만원 → [결제금액], 신뢰도 0.885</li>
+              <li>마스킹 텍스트: [가맹점명]에서 [결제금액] 결제했습니다.</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section class="slide bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">02. 제안 배경</p>
-          <h2>실제 사고 사례</h2>
-          <div class="grid-3">
-            <article><h3>Paul Manafort 사건</h3><p>법원 제출 PDF 문서를 검은 박스 처리 후 공개했지만 Copy & Paste만으로 원문이 그대로 노출되었습니다.</p></article>
-            <article><h3>영국 국방부 사례</h3><p>핵잠수함 관련 PDF 문서를 텍스트 레이어 제거 없이 배포하여 기밀 정보가 노출되었습니다.</p></article>
-            <article><h3>삼성전자 AI 오남용 사건</h3><p>DS 부문에서 챗GPT에 내부 정보, 설비 계측 소스 코드 및 회의 내용이 입력된 사례입니다.</p></article>
-          </div>
+      <section class="section dark generation">
+        <div class="section-heading">
+          <p class="eyebrow">Secure PDF Generation</p>
+          <h2>단순 오버레이가 아니라 실제 보안 처리입니다.</h2>
+          <p>원문 제거, 길이 보존형 마스킹, 문자열 치환을 함께 수행해 복구 가능한 취약점을 줄입니다.</p>
+        </div>
+        <div class="mini-gallery">
+          <img src="assets/media/image19.jpg" alt="PDF 생성 예시 1" />
+          <img src="assets/media/image20.jpg" alt="PDF 생성 예시 2" />
+          <img src="assets/media/image21.jpg" alt="PDF 생성 예시 3" />
+          <img src="assets/media/image22.jpg" alt="PDF 생성 예시 4" />
         </div>
       </section>
 
-      <section class="slide bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">03. 기존 보안의 한계</p>
-          <h2>기존 솔루션 분석</h2>
-          <div class="comparison">
-            <div><h3>DRM</h3><p>접근 권한 제어 중심 구조로 화면 촬영 등 우회가 가능하고, 접근 허용 이후 대응이 제한됩니다.</p></div>
-            <div><h3>DLP</h3><p>규칙 기반 탐지 방식으로 운영되어 문맥 및 의미 기반 분석에 한계가 있고 비정형 데이터 탐지가 어렵습니다.</p></div>
-            <div><h3>Redaction</h3><p>화면상 마스킹 중심 처리로 OCR 레이어, Metadata, 숨겨진 데이터 복구 위험이 남을 수 있습니다.</p></div>
-          </div>
+      <section id="model" class="section light two-column">
+        <div class="section-heading">
+          <p class="eyebrow">AI Model</p>
+          <h2>문장 맥락과 개체 정보를 함께 봅니다.</h2>
+          <p>
+            Sentence Classifier가 위험 문장을 먼저 선별하고, NER 모델이 실제로 마스킹할
+            단어를 찾아냅니다.
+          </p>
+        </div>
+        <div class="model-cards">
+          <article>
+            <img src="assets/media/image24.png" alt="Sentence Classifier 설명 이미지" />
+            <h3>Sentence Classifier</h3>
+            <p>계약금, 계좌, 내부문서, 보안정보 등 민감정보 가능성이 높은 문장을 우선 탐지합니다.</p>
+          </article>
+          <article>
+            <img src="assets/media/image25.png" alt="NER 모델 설명 이미지" />
+            <h3>NER 모델</h3>
+            <p>이름, 전화번호, 주소, 계약번호 등 실제 마스킹해야 할 텍스트를 유형별로 분류합니다.</p>
+          </article>
         </div>
       </section>
 
-      <section class="slide split bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">03. 기존 보안의 한계</p>
-          <h2>기존 보안 시연</h2>
-          <p>알PDF 등 기존 도구의 마스킹 처리 한계를 보여주는 시연 영상입니다.</p>
+      <section class="section light differentiation">
+        <div class="section-heading">
+          <p class="eyebrow">Differentiation</p>
+          <h2>기존 프로그램과 다르게, 문맥과 잔존 데이터를 함께 봅니다.</h2>
         </div>
-        <figure class="media-card"><video src="assets/media/media1.mp4" controls></video></figure>
-      </section>
-
-      <section class="slide split bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">03. 기존 보안의 한계</p>
-          <h2>기존 보안 시연</h2>
-          <p>Dangerzone 등 기존 방식과 PDF 처리 결과를 비교하는 시연 영상입니다.</p>
-        </div>
-        <figure class="media-card"><video src="assets/media/media2.mp4" controls></video></figure>
-      </section>
-
-      <section class="slide bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">04. 해결 방안</p>
-          <h2>찾아내고, 지우고, 새로 만든다</h2>
-          <div class="grid-3">
-            <article><h3>AI 기반 정보 식별</h3><p>개인정보 및 민감정보를 자동 분석하고 이름, 연락처, 계좌번호 등 주요 정보를 탐지합니다.</p></article>
-            <article><h3>데이터 제거 중심 구조</h3><p>단순 가림 처리가 아닌 실제 데이터 제거를 수행하고 Metadata 및 숨겨진 정보까지 제거합니다.</p></article>
-            <article><h3>안전 공유용 PDF 생성</h3><p>외부 공유용 안전 PDF 파일을 자동 생성해 문서 공유 환경 보안을 강화합니다.</p></article>
-          </div>
+        <div class="detail-grid">
+          <article>
+            <h3>메타데이터까지 완전 삭제</h3>
+            <p>문서의 메타데이터와 민감정보를 함께 제거하여 잔존 가능성을 최소화하고 필요한 정보만 선택적으로 삭제할 수 있습니다.</p>
+          </article>
+          <article>
+            <h3>문맥·의미 기반 탐지</h3>
+            <p>단순 키워드 검색이 아니라 문장의 의미와 맥락을 분석해 개인정보와 민감정보를 더 정확하게 탐지합니다.</p>
+          </article>
+          <article>
+            <h3>자동 탐지를 통한 편의성</h3>
+            <p>사용자가 직접 찾을 필요 없이 AI가 자동으로 후보를 제시해 검토 시간을 단축하고 업무 효율성을 높입니다.</p>
+          </article>
         </div>
       </section>
 
-      <section class="slide split bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">04. 해결 방안</p>
-          <h2>주요 기능</h2>
-          <ul>
-            <li>KoELECTRA 기반 NER로 민감정보 탐지</li>
-            <li>PERSON, ORG, PHONE 등 Entity 분류</li>
-            <li>정보 유형, 조합 기반 위험도 점수 산정</li>
-            <li>사용자 검토 후 유지/마스킹/삭제 대상 결정</li>
-          </ul>
+      <section class="section dark constraints">
+        <div class="section-heading">
+          <p class="eyebrow">Limitations</p>
+          <h2>한계도 분명히 인식합니다.</h2>
         </div>
-        <div class="stat-panel">한국어 문서 특화 분석</div>
-      </section>
-
-      <section class="slide split bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">04. 해결 방안</p>
-          <h2>기능 예시</h2>
-          <p>NER 기반 식별 결과를 통해 문장 속 개체를 탐지하고 마스킹 텍스트와 신뢰도를 함께 제공합니다.</p>
-          <ul>
-            <li>장미식당 → [가맹점명] 신뢰도 0.529</li>
-            <li>2만원 → [결제금액] 신뢰도 0.885</li>
-          </ul>
-        </div>
-        <figure class="media-card"><img src="assets/media/image23.png" alt="NER 기반 식별 결과 예시" /></figure>
-      </section>
-
-      <section class="slide split bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">04. 해결 방안</p>
-          <h2>PDF 생성 예시</h2>
-          <p>핵심은 단순 오버레이가 아니라 원문 제거, 길이 보존형 마스킹, 문자열 치환을 함께 수행하는 보안 처리입니다.</p>
-        </div>
-        <figure class="media-card"><img src="assets/media/image24.png" alt="PDF 생성 예시" /></figure>
-      </section>
-
-      <section class="slide chapter bg-main"><div class="slide-inner"><p class="eyebrow">05. 모델 설명</p><h2>모델 설명</h2></div></section>
-
-      <section class="slide bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">05. 모델 설명</p>
-          <h2>Sentence Classifier</h2>
-          <ul class="large-list">
-            <li>PDF 문장 전체의 의미를 보고 민감정보가 포함될 가능성이 높은 문장을 선별</li>
-            <li>문장 전체의 맥락을 기준으로 위험도 판단</li>
-            <li>계약금, 계좌, 내부문서, 보안정보 등이 포함된 문장 우선 탐지</li>
-            <li>분류된 문장에 대해서만 NER을 수행하여 탐지 효율성 증가</li>
-          </ul>
+        <div class="model-cards">
+          <article>
+            <h3>학습용 데이터 부족</h3>
+            <p>계약서, 업무 문서, 내부 보고서는 기관과 기업마다 작성 양식과 표현 방식이 달라 모든 문서 표현을 일반화하기 어렵습니다.</p>
+            <span>특정 기업에서만 사용하는 내부 용어, 계약 번호 체계, 업무 프로세스 탐지 성능은 낮을 수 있습니다.</span>
+          </article>
+          <article>
+            <h3>PDF 품질 차이에 따른 텍스트 추출 편차</h3>
+            <p>PDF마다 텍스트 레이어, 줄바꿈, 표 구조, 스캔 여부가 다르며 같은 문장도 문장, 줄, 단어 단위로 다르게 추출될 수 있습니다.</p>
+            <span>입력 단위가 달라지면 Sentence Classifier와 NER 결과에도 영향을 줄 수 있습니다.</span>
+          </article>
         </div>
       </section>
 
-      <section class="slide bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">05. 모델 설명</p>
-          <h2>NER 모델</h2>
-          <ul class="large-list">
-            <li>문장 안에서 이름, 전화번호, 주소, 계약번호처럼 실제로 마스킹해야 할 단어 선별</li>
-            <li>PERSON, PHONE, ORG, CONTRACT_ID 등 정보 유형 분류</li>
-            <li>탐지된 텍스트를 PDF 좌표와 연결하여 마스킹 후보 생성</li>
-            <li>UI에서 사용자가 확인하고 최종 마스킹 여부 결정</li>
-          </ul>
+      <section id="demo" class="section dark demo">
+        <div class="section-heading">
+          <p class="eyebrow">Demo</p>
+          <h2>기존 방식의 한계를 시연합니다.</h2>
+        </div>
+        <div class="demo-grid">
+          <video src="assets/media/media1.mp4" controls></video>
+          <video src="assets/media/media2.mp4" controls></video>
         </div>
       </section>
 
-      <section class="slide chapter bg-main"><div class="slide-inner"><p class="eyebrow">05. 모델 설명</p><h2>기존 프로그램과의 차별점 및 한계점</h2></div></section>
-
-      <section class="slide bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">05. 모델 설명</p>
-          <h2>기존 프로그램과의 차별점</h2>
-          <div class="grid-3">
-            <article><h3>메타데이터까지 완전 삭제</h3><p>문서의 메타데이터와 민감정보를 함께 제거하여 잔존 가능성을 최소화합니다.</p></article>
-            <article><h3>문맥·의미 기반 탐지</h3><p>단순 키워드 검색이 아닌 문장의 의미와 맥락을 분석해 개인정보와 민감정보를 더 정확하게 탐지합니다.</p></article>
-            <article><h3>자동 탐지를 통한 편의성</h3><p>사용자가 직접 찾을 필요 없이 AI가 자동으로 민감정보를 탐지해 검토 시간을 단축합니다.</p></article>
-          </div>
+      <section id="impact" class="section light impact">
+        <div class="section-heading">
+          <p class="eyebrow">Impact</p>
+          <h2>공유 전 보안 점검을 누구나 쉽게</h2>
+        </div>
+        <div class="impact-list">
+          <article>
+            <strong>보안 측면</strong>
+            <span>고위험 개인정보 및 업무기밀의 외부 유출 위험도를 낮추고, 가짜 마스킹, 숨은 텍스트, 메타데이터 등 비가시적 위험 요소를 점검합니다.</span>
+          </article>
+          <article>
+            <strong>업무 측면</strong>
+            <span>비전문 사용자도 공유 전 보안 점검을 수행하고, 정보 유형, 문맥, 위치, 조합, 가능성 기반 검토 우선순위를 확인할 수 있습니다.</span>
+          </article>
+          <article>
+            <strong>비즈니스 측면</strong>
+            <span>공유 대상별 최소 공개 원칙을 적용하고, 유출 사고 예방을 통해 사후 대응 비용과 법적·관리적 검토 부담을 줄입니다.</span>
+          </article>
         </div>
       </section>
-
-      <section class="slide bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">05. 모델 설명</p>
-          <h2>한계점</h2>
-          <div class="grid-2">
-            <article><h3>학습용 데이터 부족</h3><p>계약서, 업무 문서, 내부 보고서는 기관과 기업마다 작성 양식과 표현 방식이 달라 모든 표현을 일반화하기 어렵습니다.</p></article>
-            <article><h3>PDF 품질 차이에 따른 텍스트 추출 편차</h3><p>텍스트 레이어, 줄바꿈, 표 구조, 스캔 여부에 따라 입력 단위가 달라지고 모델 결과에도 영향을 줄 수 있습니다.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="slide bg-main">
-        <div class="slide-inner">
-          <p class="eyebrow">06. 기대 효과</p>
-          <h2>기대 효과</h2>
-          <div class="impact-list">
-            <div><strong>보안 측면</strong><span>고위험 개인정보 및 업무기밀의 외부 유출 위험도 감소</span></div>
-            <div><strong>업무 측면</strong><span>비전문 사용자도 공유 전 보안 점검 수행 가능</span></div>
-            <div><strong>비즈니스 측면</strong><span>공유 대상별 최소 공개 원칙 적용 및 사후 대응 비용 완화</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="slide closing bg-end"><div class="slide-inner"><p class="eyebrow">Thank You</p><h2>감사합니다.</h2></div></section>
     </main>
-
-    <nav class="controls" aria-label="슬라이드 이동">
-      <button type="button" id="prevSlide" aria-label="이전 슬라이드">‹</button>
-      <span id="slideCount">1 / 20</span>
-      <button type="button" id="nextSlide" aria-label="다음 슬라이드">›</button>
-    </nav>
 
     <script src="script.js"></script>
   </body>
