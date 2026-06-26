@@ -160,12 +160,18 @@ p {
 
 .hero-visual {
   margin: 0;
+  overflow: hidden;
+  border-radius: 28px;
 }
 
 .hero-visual img {
   width: 100%;
   display: block;
   filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.16));
+  transform: scale(var(--hero-zoom, 1));
+  transform-origin: center center;
+  transition: transform 80ms linear;
+  will-change: transform;
 }
 
 .section {
