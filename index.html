@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SSP - Safe Share PDF</title>
+    <title>SSP | Safe Share PDF</title>
+    <link rel="icon" type="image/png" href="assets/logo-cutout.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-nav">
-      <a class="brand" href="#hero">SSP</a>
+      <a class="brand" href="#hero">
+        <img src="assets/logo-cutout.png" alt="" />
+        <span>SSP</span>
+      </a>
       <nav aria-label="주요 메뉴">
         <a href="#problem">문제</a>
         <a href="#solution">기능</a>
@@ -51,17 +55,17 @@
           <article>
             <img src="assets/media/image6.png" alt="마스킹 처리 허점" />
             <h3>마스킹 처리의 허점</h3>
-            <p>복사와 붙여넣기 과정에서 원본 텍스트가 다시 노출될 수 있습니다.</p>
+            <p>복사와 붙여넣기 과정에서<br />원본 텍스트가 다시 노출될 수 있습니다.</p>
           </article>
           <article>
             <img src="assets/media/image8.png" alt="숨겨진 데이터 존재" />
             <h3>숨겨진 데이터</h3>
-            <p>Metadata와 Hidden text 레이어가 문서 안에 남아 보안 위험을 만듭니다.</p>
+            <p>Metadata와 Hidden text 레이어가<br />문서 안에 남아 보안 위험을 만듭니다.</p>
           </article>
           <article>
             <img src="assets/media/image9.jpeg" alt="실제 사고 사례" />
             <h3>실제 사고 사례</h3>
-            <p>PDF 내부 구조에 대한 이해 부족은 실제 기밀 정보 유출로 이어졌습니다.</p>
+            <p>PDF 내부 구조에 대한 이해 부족은<br />실제 기밀 정보 유출로 이어졌습니다.</p>
           </article>
         </div>
       </section>
@@ -74,18 +78,18 @@
         <div class="detail-grid">
           <article>
             <h3>미국 Paul Manafort 사건</h3>
-            <p>법원 제출 PDF 문서를 검은 박스로 처리한 뒤 공개했지만, Copy & Paste만으로 원문이 그대로 노출되었습니다.</p>
-            <span>시각적 마스킹만으로는 데이터를 보호할 수 없다는 대표 사례입니다.</span>
+            <p>법원 제출 PDF 문서를 검은 박스로 처리한 뒤 공개했지만<br />Copy & Paste만으로 원문이 그대로 노출되었습니다.</p>
+            <span>시각적 마스킹만으로는<br />데이터를 보호할 수 없다는 대표 사례입니다.</span>
           </article>
           <article>
             <h3>영국 국방부 사례</h3>
-            <p>핵잠수함 관련 PDF 문서를 공개하면서 텍스트 레이어가 제거되지 않아 기밀 정보가 그대로 노출되었습니다.</p>
-            <span>PDF 내부 구조에 대한 이해 부족이 보안 사고로 이어진 사례입니다.</span>
+            <p>핵잠수함 관련 PDF 문서를 공개하면서<br />텍스트 레이어가 제거되지 않아 기밀 정보가 노출되었습니다.</p>
+            <span>PDF 내부 구조에 대한 이해 부족이<br />보안 사고로 이어진 사례입니다.</span>
           </article>
           <article>
             <h3>삼성전자 AI 오남용 사건</h3>
-            <p>DS 부문에서 챗GPT에 내부 정보, 설비 계측 소스 코드, 회의 내용이 입력되어 생성형 AI 보안 가이드라인 부재가 드러났습니다.</p>
-            <span>클라우드 AI 사용 시 민감 문서 자체가 외부 서버로 전송될 수 있습니다.</span>
+            <p>DS 부문에서 챗GPT에 내부 정보와<br />설비 계측 소스 코드, 회의 내용이 입력되었습니다.</p>
+            <span>클라우드 AI 사용 시<br />민감 문서 자체가 외부 서버로 전송될 수 있습니다.</span>
           </article>
         </div>
       </section>
@@ -99,17 +103,17 @@
           <article>
             <img src="assets/media/image10.png" alt="DRM 한계" />
             <h3>DRM</h3>
-            <p>접근 권한 제어 중심 구조라 화면 촬영 등 우회가 가능하고, 접근 허용 이후 대응 방법이 제한됩니다.</p>
+            <p>접근 권한 제어 중심 구조라<br />화면 촬영 등 우회가 가능하고 대응이 제한됩니다.</p>
           </article>
           <article>
             <img src="assets/media/image12.png" alt="DLP 한계" />
             <h3>DLP</h3>
-            <p>규칙 기반 탐지 방식으로 운영되어 문맥 및 의미 기반 분석에 한계가 있고 비정형 데이터 탐지가 어렵습니다.</p>
+            <p>규칙 기반 탐지 방식으로 운영되어<br />문맥 분석과 비정형 데이터 탐지가 어렵습니다.</p>
           </article>
           <article>
             <img src="assets/media/image11.png" alt="Redaction 한계" />
             <h3>Redaction</h3>
-            <p>화면상 마스킹 중심 처리로 OCR 레이어, Metadata, 숨겨진 데이터 복구 위험이 남을 수 있습니다.</p>
+            <p>화면상 마스킹 중심 처리로<br />OCR 레이어와 Metadata 복구 위험이 남을 수 있습니다.</p>
           </article>
         </div>
       </section>
@@ -151,15 +155,15 @@
         <div class="detail-grid">
           <article>
             <h3>NER 기반 개체 인식</h3>
-            <p>KoELECTRA 기반 NER로 PERSON, ORG, PHONE 등 Entity를 분류하고 주요 민감정보를 탐지합니다.</p>
+            <p>KoELECTRA 기반 NER로 Entity를 분류하고<br />주요 민감정보를 탐지합니다.</p>
           </article>
           <article>
             <h3>위험도 점수 산정</h3>
-            <p>정보 유형과 조합을 기반으로 위험도를 계산해 사용자가 우선 검토해야 할 항목을 제시합니다.</p>
+            <p>정보 유형과 조합을 기반으로 위험도를 계산해<br />우선 검토할 항목을 제시합니다.</p>
           </article>
           <article>
             <h3>사용자 최종 검토</h3>
-            <p>자동 탐지 결과를 UI에서 확인하고 유지, 마스킹, 삭제 여부를 사용자가 최종 결정합니다.</p>
+            <p>자동 탐지 결과를 UI에서 확인하고<br />유지, 마스킹, 삭제 여부를 최종 결정합니다.</p>
           </article>
         </div>
       </section>
@@ -212,12 +216,12 @@
           <article>
             <img src="assets/media/image24.png" alt="Sentence Classifier 설명 이미지" />
             <h3>Sentence Classifier</h3>
-            <p>계약금, 계좌, 내부문서, 보안정보 등 민감정보 가능성이 높은 문장을 우선 탐지합니다.</p>
+            <p>계약금, 계좌, 내부문서, 보안정보 등<br />민감정보 가능성이 높은 문장을 우선 탐지합니다.</p>
           </article>
           <article>
             <img src="assets/media/image25.png" alt="NER 모델 설명 이미지" />
             <h3>NER 모델</h3>
-            <p>이름, 전화번호, 주소, 계약번호 등 실제 마스킹해야 할 텍스트를 유형별로 분류합니다.</p>
+            <p>이름, 전화번호, 주소, 계약번호 등<br />실제 마스킹할 텍스트를 유형별로 분류합니다.</p>
           </article>
         </div>
       </section>
@@ -230,15 +234,15 @@
         <div class="detail-grid">
           <article>
             <h3>메타데이터까지 완전 삭제</h3>
-            <p>문서의 메타데이터와 민감정보를 함께 제거하여 잔존 가능성을 최소화하고 필요한 정보만 선택적으로 삭제할 수 있습니다.</p>
+            <p>문서의 메타데이터와 민감정보를 함께 제거해<br />잔존 가능성을 최소화합니다.</p>
           </article>
           <article>
             <h3>문맥·의미 기반 탐지</h3>
-            <p>단순 키워드 검색이 아니라 문장의 의미와 맥락을 분석해 개인정보와 민감정보를 더 정확하게 탐지합니다.</p>
+            <p>단순 키워드 검색이 아니라<br />문장의 의미와 맥락을 분석합니다.</p>
           </article>
           <article>
             <h3>자동 탐지를 통한 편의성</h3>
-            <p>사용자가 직접 찾을 필요 없이 AI가 자동으로 후보를 제시해 검토 시간을 단축하고 업무 효율성을 높입니다.</p>
+            <p>AI가 자동으로 후보를 제시해<br />검토 시간을 줄이고 업무 효율을 높입니다.</p>
           </article>
         </div>
       </section>
@@ -251,13 +255,13 @@
         <div class="model-cards">
           <article>
             <h3>학습용 데이터 부족</h3>
-            <p>계약서, 업무 문서, 내부 보고서는 기관과 기업마다 작성 양식과 표현 방식이 달라 모든 문서 표현을 일반화하기 어렵습니다.</p>
-            <span>특정 기업에서만 사용하는 내부 용어, 계약 번호 체계, 업무 프로세스 탐지 성능은 낮을 수 있습니다.</span>
+            <p>계약서, 업무 문서, 내부 보고서는<br />기관과 기업마다 표현 방식이 다릅니다.</p>
+            <span>특정 기업의 내부 용어와 계약 번호 체계는<br />탐지 성능이 낮을 수 있습니다.</span>
           </article>
           <article>
             <h3>PDF 품질 차이에 따른 텍스트 추출 편차</h3>
-            <p>PDF마다 텍스트 레이어, 줄바꿈, 표 구조, 스캔 여부가 다르며 같은 문장도 문장, 줄, 단어 단위로 다르게 추출될 수 있습니다.</p>
-            <span>입력 단위가 달라지면 Sentence Classifier와 NER 결과에도 영향을 줄 수 있습니다.</span>
+            <p>PDF마다 텍스트 레이어와 표 구조가 달라<br />같은 문장도 다르게 추출될 수 있습니다.</p>
+            <span>입력 단위가 달라지면<br />Sentence Classifier와 NER 결과에도 영향을 줍니다.</span>
           </article>
         </div>
       </section>
@@ -281,15 +285,15 @@
         <div class="impact-list">
           <article>
             <strong>보안 측면</strong>
-            <span>고위험 개인정보 및 업무기밀의 외부 유출 위험도를 낮추고, 가짜 마스킹, 숨은 텍스트, 메타데이터 등 비가시적 위험 요소를 점검합니다.</span>
+            <span>고위험 개인정보와 업무기밀의<br />외부 유출 위험도를 낮춥니다.</span>
           </article>
           <article>
             <strong>업무 측면</strong>
-            <span>비전문 사용자도 공유 전 보안 점검을 수행하고, 정보 유형, 문맥, 위치, 조합, 가능성 기반 검토 우선순위를 확인할 수 있습니다.</span>
+            <span>비전문 사용자도 공유 전 보안 점검과<br />검토 우선순위 확인이 가능합니다.</span>
           </article>
           <article>
             <strong>비즈니스 측면</strong>
-            <span>공유 대상별 최소 공개 원칙을 적용하고, 유출 사고 예방을 통해 사후 대응 비용과 법적·관리적 검토 부담을 줄입니다.</span>
+            <span>최소 공개 원칙을 적용해<br />사후 대응 비용과 검토 부담을 줄입니다.</span>
           </article>
         </div>
       </section>
