@@ -196,6 +196,38 @@ p {
   background: transparent;
 }
 
+.section.detail {
+  background: #061f4f;
+}
+
+.section.detail .section-heading h2 {
+  color: #ffffff;
+}
+
+.section.detail .case-card {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+}
+
+.section.detail .case-card h3,
+.section.detail .case-card strong {
+  color: #ffffff;
+}
+
+.section.detail .case-card li,
+.section.detail .case-card span {
+  color: #d7deea;
+}
+
+.section.detail .case-card a {
+  color: #9ed3ff;
+}
+
+.section.detail .case-card img {
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
 .section.dark {
   color: var(--ink);
   background: transparent;
