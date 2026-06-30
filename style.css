@@ -250,6 +250,15 @@ article,
   background: var(--white);
 }
 
+.feature-grid article {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-grid article p {
+  margin: auto 0;
+}
+
 article:hover,
 article:focus-within,
 .product-showcase figure:hover,
