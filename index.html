@@ -229,14 +229,31 @@
           <figure>
             <img src="assets/media/image18.jpg" alt="BERT-CRF 기반 개체명 인식 모델의 태깅 프로세스" />
           </figure>
-          <div>
-            <h3>NER 기반 식별 결과</h3>
-            <p>예시 문장: 장미 식당에서 2만원 결제했습니다.</p>
-            <ul>
-              <li>장미식당 → [가맹점명], 신뢰도 0.529</li>
-              <li>2만원 → [결제금액], 신뢰도 0.885</li>
-              <li>마스킹 텍스트: [가맹점명]에서 [결제금액] 결제했습니다.</li>
-            </ul>
+          <div class="ner-result">
+            <table>
+              <thead>
+                <tr>
+                  <th>예시 문장</th>
+                  <th>NER 모델 결과</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="4">장미 식당에서 2만원<br />결제했습니다.</td>
+                  <td>마스킹 텍스트 : [가맹점명]에서 [결제금액] 결제했습니다.</td>
+                </tr>
+                <tr>
+                  <td>발견 개수 : 2개</td>
+                </tr>
+                <tr>
+                  <td>장미식당 → [가맹점명]<br /><span>(신뢰도 : 0.529)</span></td>
+                </tr>
+                <tr>
+                  <td>2만원 → [결제금액]<br /><span>(신뢰도 : 0.885)</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <strong>[ NER 기반 식별 결과 - 예시 문장 ]</strong>
           </div>
         </div>
       </section>
