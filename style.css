@@ -192,16 +192,42 @@ p {
   padding: clamp(72px, 9vw, 140px) clamp(22px, 7vw, 112px);
 }
 
-.section.light {
-  background: transparent;
+.section.light,
+.section.dark {
+  background: #f7fbff;
 }
 
-.section.detail {
+.section.detail,
+.section.demo,
+.section.functions,
+.section.generation,
+.section.architecture,
+.section.constraints {
   background: #061f4f;
 }
 
-.section.detail .section-heading h2 {
+.section.detail .section-heading h2,
+.section.demo .section-heading h2,
+.section.functions .section-heading h2,
+.section.generation .section-heading h2,
+.section.architecture .section-heading h2,
+.section.constraints .section-heading h2 {
   color: #ffffff;
+}
+
+.section.detail > .section-heading p,
+.section.demo > .section-heading p,
+.section.functions > .section-heading p,
+.section.generation > .section-heading p,
+.section.architecture > .section-heading p,
+.section.constraints > .section-heading p {
+  color: #d7deea;
+}
+
+.section.demo video {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.2);
 }
 
 .section.detail .case-card {
@@ -230,12 +256,6 @@ p {
 
 .section.dark {
   color: var(--ink);
-  background: transparent;
-}
-
-.section.dark p,
-.section.dark figcaption {
-  color: var(--muted);
 }
 
 .section-heading {
@@ -294,6 +314,24 @@ article,
 .section.dark article,
 .section.dark .product-showcase figure {
   background: var(--white);
+}
+
+.section.functions article,
+.section.constraints article {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+}
+
+.section.functions article h3,
+.section.constraints article h3 {
+  color: #ffffff;
+}
+
+.section.functions article p,
+.section.constraints article p,
+.section.constraints article span {
+  color: #d7deea;
 }
 
 .feature-grid article {
