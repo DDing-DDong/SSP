@@ -327,6 +327,21 @@ article img,
   background: #ffffff;
 }
 
+.architecture-view {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(12px, 2vw, 22px);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 22px 56px rgba(6, 31, 79, 0.18);
+}
+
+.architecture-view img {
+  height: auto;
+  max-height: 540px;
+  border-radius: 8px;
+}
+
 article p,
 article span,
 figcaption {
