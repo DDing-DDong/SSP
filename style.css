@@ -438,18 +438,30 @@ article img,
 }
 
 .architecture-view {
+  display: block;
+  width: min(1120px, 100%);
   max-width: 1120px;
   margin: 0 auto;
-  padding: clamp(12px, 2vw, 22px);
+  padding: 0;
   border-radius: 18px;
   background: #ffffff;
+  overflow: hidden;
   box-shadow: 0 22px 56px rgba(6, 31, 79, 0.18);
 }
 
+.section.architecture {
+  padding-top: clamp(56px, 7vw, 96px);
+  padding-bottom: clamp(56px, 7vw, 96px);
+}
+
 .architecture-view img {
+  display: block;
+  width: 100%;
   height: auto;
-  max-height: 540px;
-  border-radius: 8px;
+  max-height: none;
+  margin: 0;
+  object-fit: contain;
+  border-radius: 0;
 }
 
 article p,
