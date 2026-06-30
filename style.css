@@ -334,6 +334,46 @@ article,
   color: #d7deea;
 }
 
+.section.detail article:hover,
+.section.detail article:focus-within,
+.section.functions article:hover,
+.section.functions article:focus-within,
+.section.constraints article:hover,
+.section.constraints article:focus-within {
+  background: #ffffff;
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 22px 46px rgba(255, 255, 255, 0.16), 0 18px 36px rgba(0, 0, 0, 0.22);
+}
+
+.section.detail article:hover h3,
+.section.detail article:focus-within h3,
+.section.detail article:hover strong,
+.section.detail article:focus-within strong,
+.section.functions article:hover h3,
+.section.functions article:focus-within h3,
+.section.constraints article:hover h3,
+.section.constraints article:focus-within h3 {
+  color: var(--ink);
+}
+
+.section.detail article:hover li,
+.section.detail article:focus-within li,
+.section.detail article:hover span,
+.section.detail article:focus-within span,
+.section.functions article:hover p,
+.section.functions article:focus-within p,
+.section.constraints article:hover p,
+.section.constraints article:focus-within p,
+.section.constraints article:hover span,
+.section.constraints article:focus-within span {
+  color: var(--muted);
+}
+
+.section.detail article:hover a,
+.section.detail article:focus-within a {
+  color: var(--blue);
+}
+
 .feature-grid article {
   display: flex;
   flex-direction: column;
