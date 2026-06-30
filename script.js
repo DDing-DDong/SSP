@@ -21,6 +21,13 @@ document.body.appendChild(imageModal);
 
 const modalImage = imageModal.querySelector("img");
 const modalCloseButton = imageModal.querySelector("button");
+const videoModal = document.createElement("div");
+videoModal.className = "video-modal";
+videoModal.innerHTML = '<button type="button" aria-label="확대 영상 닫기">&times;</button><video controls playsinline></video>';
+document.body.appendChild(videoModal);
+
+const modalVideo = videoModal.querySelector("video");
+const videoCloseButton = videoModal.querySelector("button");
 
 function updateHeroZoom() {
   if (!hero || !heroImage) {
@@ -76,6 +83,38 @@ imageModal.addEventListener("click", (event) => {
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && imageModal.classList.contains("is-open")) {
     closeImageModal();
+  }
+
+  if (event.key === "Escape" && videoModal.classList.contains("is-open")) {
+    closeVideoModal();
+  }
+});
+
+document.querySelectorAll(".demo video").forEach((video) => {
+  video.addEventListener("play", () => {
+    if (videoModal.classList.contains("is-open")) {
+      return;
+    }
+
+    video.pause();
+    modalVideo.src = video.currentSrc || video.src;
+    modalVideo.currentTime = video.currentTime || 0;
+    videoModal.classList.add("is-open");
+    modalVideo.play().catch(() => {});
+  });
+});
+
+function closeVideoModal() {
+  videoModal.classList.remove("is-open");
+  modalVideo.pause();
+  modalVideo.removeAttribute("src");
+  modalVideo.load();
+}
+
+videoCloseButton.addEventListener("click", closeVideoModal);
+videoModal.addEventListener("click", (event) => {
+  if (event.target === videoModal) {
+    closeVideoModal();
   }
 });
 

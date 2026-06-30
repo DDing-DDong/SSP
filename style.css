@@ -827,7 +827,8 @@ figcaption,
   transform: translateY(4px);
 }
 
-.image-modal {
+.image-modal,
+.video-modal {
   position: fixed;
   inset: 0;
   z-index: 100;
@@ -840,7 +841,8 @@ figcaption,
   transition: opacity 180ms ease;
 }
 
-.image-modal.is-open {
+.image-modal.is-open,
+.video-modal.is-open {
   opacity: 1;
   pointer-events: auto;
 }
@@ -855,7 +857,18 @@ figcaption,
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.32);
 }
 
-.image-modal button {
+.video-modal video {
+  display: block;
+  width: min(1120px, 92vw);
+  max-height: 82vh;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 18px;
+  background: #000000;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38);
+}
+
+.image-modal button,
+.video-modal button {
   position: absolute;
   top: 18px;
   right: 18px;
