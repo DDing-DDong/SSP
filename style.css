@@ -968,8 +968,35 @@ figcaption,
 }
 
 @media (max-width: 860px) {
+  .site-nav {
+    height: auto;
+    min-height: 58px;
+    gap: 10px;
+    padding: 8px 14px;
+  }
+
+  .brand {
+    font-size: 21px;
+  }
+
+  .brand img {
+    width: 34px;
+    height: 34px;
+  }
+
   .site-nav nav {
-    display: none;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 4px;
+  }
+
+  .site-nav nav a {
+    width: auto;
+    min-width: 44px;
+    height: 40px;
+    padding: 0 8px;
+    border-radius: 999px;
+    font-size: 13px;
   }
 
   .hero,
@@ -985,6 +1012,33 @@ figcaption,
 
   .hero {
     min-height: auto;
+    gap: 28px;
+    padding: 48px 18px 64px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 34px;
+    line-height: 1.18;
+  }
+
+  h3 {
+    white-space: normal;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .section {
+    padding: 64px 18px;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
   }
 
   article img,
@@ -994,6 +1048,8 @@ figcaption,
 
   .product-showcase figure {
     grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 26px 22px;
     text-align: center;
   }
 
@@ -1004,10 +1060,23 @@ figcaption,
 
   .security-flow {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .security-arrow::after {
     transform: rotate(90deg);
+  }
+
+  .security-arrow {
+    gap: 10px;
+  }
+
+  .example-panel {
+    padding: 20px;
+  }
+
+  .architecture-view {
+    width: 100%;
   }
 
   .ner-result td,
@@ -1031,5 +1100,95 @@ figcaption,
   .section-heading h2,
   .section-heading p {
     white-space: normal;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-nav nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .site-nav nav a {
+    min-width: 0;
+    height: 36px;
+    padding: 0 6px;
+    font-size: 12px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .feature-grid,
+  .detail-grid,
+  .model-cards,
+  .demo-grid,
+  .impact-list {
+    gap: 18px;
+  }
+
+  article,
+  .product-showcase figure {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  article img {
+    height: auto;
+    max-height: 220px;
+    object-fit: contain;
+  }
+
+  .image-zoom img {
+    height: auto;
+    max-height: 240px;
+  }
+
+  .process-thumb span {
+    font-size: 24px;
+  }
+
+  .product-showcase li,
+  .example-panel li {
+    font-size: 16px;
+  }
+
+  .ner-result table {
+    table-layout: auto;
+  }
+
+  .ner-result th,
+  .ner-result td,
+  .ner-result td:first-child {
+    display: block;
+    width: 100%;
+  }
+
+  .ner-result td:first-child {
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .document-shot,
+  .extract-shot {
+    aspect-ratio: auto;
+  }
+
+  .site-footer h2 {
+    font-size: 18px;
   }
 }
