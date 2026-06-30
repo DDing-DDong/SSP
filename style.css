@@ -718,6 +718,22 @@ figcaption,
   min-height: 210px;
 }
 
+.impact-list article::before {
+  content: attr(data-icon);
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 18px;
+  border: 3px solid #061f4f;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #061f4f;
+  font-size: 36px;
+  line-height: 1;
+  box-shadow: 0 12px 28px rgba(6, 31, 79, 0.14);
+}
+
 .impact-list strong {
   margin-bottom: 16px;
 }
