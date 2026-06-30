@@ -62,13 +62,27 @@ body {
 
 .site-nav nav {
   display: flex;
-  gap: clamp(16px, 3vw, 34px);
+  gap: clamp(10px, 2vw, 22px);
 }
 
 .site-nav nav a {
+  display: inline-grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
   color: #424245;
   font-size: 15px;
   font-weight: 700;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.site-nav nav a:hover,
+.site-nav nav a:focus-visible {
+  color: #ffffff;
+  background: #061f4f;
+  transform: translateY(-1px);
+  outline: none;
 }
 
 .hero {
