@@ -294,6 +294,55 @@ article span {
   margin-top: 14px;
 }
 
+.case-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 325px;
+  padding: 30px;
+}
+
+.case-card h3 {
+  margin-bottom: 18px;
+}
+
+.case-card ul {
+  margin: 0 0 22px;
+  padding-left: 1.1em;
+  color: var(--muted);
+  text-align: left;
+}
+
+.case-card li {
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.45;
+  word-break: keep-all;
+}
+
+.case-card a {
+  display: block;
+  margin-top: auto;
+  color: var(--blue);
+  font-size: 14px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.case-card strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 17px;
+}
+
+.case-card img {
+  width: min(170px, 72%);
+  height: auto;
+  margin: auto auto 0;
+  border: 1px solid rgba(0, 113, 227, 0.18);
+  border-radius: 4px;
+}
+
 figcaption,
 .impact-list strong {
   display: block;
